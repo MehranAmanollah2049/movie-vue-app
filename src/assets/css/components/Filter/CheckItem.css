@@ -1,0 +1,51 @@
+
+.CheckBox {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+
+
+.selectBox {
+    width: 25px;
+    height: 25px;
+    float: right;
+    border-radius: 8px;
+    background-color: var(--bg3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CheckBox.active .selectBox {
+    background-color: var(--theme);
+}
+
+.CheckBox.radio .selectBox {
+    border-radius: 50px;
+}
+
+.selectBox svg {
+    width: 13px;
+    height: 13px;
+    float: right;
+    fill: white;
+}
+
+.text {
+    float: right;
+    font-size: 15px;
+    color: var(--text);
+    font-family: 'yekan_Medium';
+    user-select: none;
+}
+
+:deep(.loadingContainer) {
+    padding: 0;
+}

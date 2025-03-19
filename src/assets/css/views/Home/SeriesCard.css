@@ -1,0 +1,151 @@
+
+.SeriesCard {
+    width: 300px;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.banner {
+    width: 100%;
+    height: 190px;
+    float: right;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    float: right;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+    border-radius: inherit;
+    transition: 0.2s ease-in-out;
+}
+
+.SeriesCard:hover .banner img {
+    filter: brightness(0.5);
+}
+
+
+.topDetail {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    inset: 0 0 auto 0;
+    z-index: 3;
+    padding: 0.5rem;
+}
+
+.right_detail {
+    width: auto;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.lang {
+    width: 27px;
+    height: 27px;
+    float: right;
+    background-color: #0000009e;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lang svg {
+    width: 15px;
+    height: 15px;
+    float: right;
+    fill: white;
+    transform: translateY(-0.5px) translateX(-0.1px);
+}
+
+.series_detail {
+    width: auto;
+    height: 47px;
+    float: right;
+    background-color: #000000ca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 0.4rem;
+    border-radius: 14px;
+    margin-top: -34px;
+    position: relative;
+    z-index: 6;
+}
+
+.series_detail .added {
+    width: auto;
+    height: 100%;
+    float: right;
+    border-radius: 10px;
+    padding: 0 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--theme);
+    color: white;
+    font-size: 13px;
+    font-family: 'yekan_Medium';
+}
+
+.series_detail .season {
+    font-size: 13px;
+    color: white;
+    float: right;
+    font-family: 'yekan_Medium';
+    padding: 0 0.6rem;
+}
+
+.series_name {
+    width: 100%;
+    height: auto;
+    float: right;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    color: white;
+    font-family: var(--font);
+    margin-top: 5px;
+}
+
+@media(max-width: 1200px) {
+    .banner {
+        height: 170px;
+    }
+}
+
+@media(max-width: 720px) {
+    .banner {
+        height: 150px;
+    }
+}
+
+@media(max-width: 400px) {
+    .banner {
+        height: 135px;
+    }
+}

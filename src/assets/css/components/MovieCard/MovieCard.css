@@ -1,0 +1,252 @@
+.MovieCard {
+    width: 180px;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.2s ease-in-out;
+}
+
+
+.MovieCard * {
+    user-select: none;
+}
+
+.banner {
+    width: 100%;
+    height: 290px;
+    float: right;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 10px;
+    background-color: var(--bg2);
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    float: right;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+    border-radius: inherit;
+}
+
+.banner::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(to top, var(--theme), transparent);
+    bottom: -1px;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    transform: scale(1.010);
+    transform-origin: bottom;
+    transition: 0.2s ease;
+    opacity: 0;
+}
+
+.MovieCard:hover .banner::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.movie_detail {
+    width: 100%;
+    height: 45px;
+    background-color: #161d27d6;
+    position: absolute;
+    inset: auto 0 0 0;
+    z-index: 3;
+    border-radius: 15px 15px 14px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem;
+}
+
+.movie_detail .item {
+    width: calc(100% / 2);
+    height: 100%;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+.movie_detail .item span {
+    font-size: 16px;
+    font-family: 'yekan_Bold';
+    color: white;
+    transform: translateY(1.3px);
+}
+
+.movie_detail .item svg {
+    width: 19px;
+    height: 19px;
+    float: left;
+}
+
+.topDetail {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    inset: 0 0 auto 0;
+    z-index: 3;
+    padding: 0.5rem;
+}
+
+.right_detail {
+    width: auto;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.lang {
+    width: 27px;
+    height: 27px;
+    float: right;
+    background-color: #0000009e;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lang svg {
+    width: 15px;
+    height: 15px;
+    float: right;
+    fill: white;
+    transform: translateY(-0.5px) translateX(-0.1px);
+}
+
+.type_movie {
+    width: auto;
+    height: 22px;
+    float: right;
+    background-color: #0000009e;
+    color: white;
+    font-size: 11px;
+    font-family: 'yekan_Medium';
+    border-radius: 8px;
+    padding: 0 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.layer {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    z-index: 4;
+    background-color: #000000d0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease-in-out;
+}
+
+.MovieCard:hover .layer {
+    opacity: 1;
+    visibility: visible;
+}
+
+.layer .tags {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.layer .tag {
+    width: auto;
+    height: 24px;
+    background-color: #ffffff28;
+    color: white;
+    font-size: 11px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.3rem;
+    font-family: 'yekan_Medium';
+}
+
+.movie_year {
+    font-size: 15px;
+    color: var(--theme);
+    width: 100%;
+    text-align: center;
+    float: right;
+    font-family: var(--font);
+    margin-bottom: 5px;
+}
+
+.MovieCard .title {
+    font-size: 16px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    float: right;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: var(--font);
+    direction: ltr;
+}
+
+@media(max-width: 700px) {
+
+    .banner {
+        margin-bottom: 7px;
+    }
+
+    .MovieCard .title {
+        font-size: 14px;
+    }
+
+    .movie_year {
+        font-size: 14px;
+        margin-bottom: 3px;
+    }
+
+    .movie_detail .item span {
+        font-size: 14px;
+    }
+
+    .movie_detail .item svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .movie_detail {
+        height: 40px;
+    }
+}

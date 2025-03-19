@@ -1,0 +1,29 @@
+/* loading spinner */
+
+.loadingContainer {
+    width: auto;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+    padding: 0 0.5rem;   
+}
+
+.loadingContainer.isUnder {
+    flex-direction: column;
+}
+
+.loading-svg {
+
+    width: 16px;
+    height: 16px;
+    float: right;
+}
+
+.loading-title {
+    float: right;
+    font-family: 'yekan_Medium';
+    transform: translateY(1.5px);
+}

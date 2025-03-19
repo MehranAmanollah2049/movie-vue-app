@@ -1,0 +1,68 @@
+
+.tag {
+    width: auto;
+    height: 55px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #10131a;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: 0.1rem 1.5rem 0;
+    color: white;
+    font-family: 'yekan_Medium';
+    font-size: 18px;
+}
+
+.tag svg {
+    width: 25px;
+    height: 25px;
+    float: right;
+    stroke: white;
+    transform: translateY(-2px);
+}
+
+@media(max-width: 950px) {
+    .tag {
+        font-size: 16px;
+    }
+
+    .tag svg {
+        width: 20px;
+        height: 20px;
+        transform: translateY(-1px);
+    }
+}
+
+@media(max-width: 750px) {
+    .tag {
+        font-size: 15px;
+        height: 47px;
+    }
+
+    .tag svg {
+        width: 18px;
+        height: 18px;
+        transform: translateY(-1px);
+    }
+}
+
+@media(max-width: 450px) {
+    .tag {
+        width: 83%;
+        padding: 0;
+    }
+
+}
+
+@media(max-width: 310px) {
+    .tag {
+        width: 90%;
+        font-size: 14px;
+    }
+
+}

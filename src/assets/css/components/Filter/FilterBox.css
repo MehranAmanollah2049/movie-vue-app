@@ -1,0 +1,101 @@
+
+.FilterBox {
+    width: 100%;
+    height: auto;
+    float: right;
+    border-radius: 16px;
+    background-color: var(--bg2);
+    padding: 0 1.5rem;
+}
+
+.topFilter {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem 0;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.FilterBox.active .topFilter {
+    padding: 1.6rem 0;
+}
+
+.topFilter .rightTop {
+    width: auto;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.topFilter .rightTop :deep(svg) {
+    width: 20px;
+    height: 20px;
+    float: right;
+    fill: white;
+}
+
+.title_filter {
+    width: auto;
+    height: auto;
+    float: right;
+    font-size: 16px;
+    color: white;
+    font-family: 'yekan_Bold';
+    user-select: none;
+}
+
+.arrow {
+    width: 15px;
+    height: 15px;
+    float: right;
+    stroke: white;
+    transition: 0.2s ease-in-out;
+}
+
+.FilterBox.active .arrow {
+    transform: rotate(180deg);
+}
+
+.bottomFilter {
+    width: 100%;
+    height: 0;
+    float: right;
+    overflow: hidden;
+    border-top: solid 1.5px transparent;
+    transition: 0.2s ease-in-out;
+}
+
+.FilterBox.active .bottomFilter {
+    border-color: #ffffff11;
+}
+
+.bottomContentFilter {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    padding: 1.5rem 0;
+}
+
+.tddd {
+    width: 100%;
+    float: right;
+    color: white;
+}
+
+:deep(.loadingContainer .loading-title) {
+    color:  white;
+    font-size: 14px;
+    transform: translateY(-0.2px);
+}

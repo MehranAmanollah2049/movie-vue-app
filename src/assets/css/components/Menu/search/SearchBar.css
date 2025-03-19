@@ -1,0 +1,259 @@
+.SearchBar {
+    width: 43px;
+    height: 43px;
+    float: right;
+    border-radius: 15px;
+    background-color: black;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.overlay_search {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    display: none;
+}
+
+.overlay_search.active {
+    display: block;
+}
+
+.searchContent {
+    width: 100%;
+    height: 100%;
+    float: right;
+    overflow: hidden;
+    border-radius: inherit;
+}
+
+.SearchBar.active {
+    width: 280px;
+}
+
+.SearchBar .icon {
+    width: 43px;
+    height: 43px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    cursor: pointer;
+}
+
+.SearchBar .icon:hover svg {
+    stroke: var(--theme);
+}
+
+.SearchBar svg {
+    width: 20px;
+    height: 20px;
+    float: right;
+    stroke: white;
+    transform: translateY(-0.5px) translateX(-0.3px);
+    transition: 0.2s ease-in-out;
+}
+
+.SearchBar input {
+    width: calc(100% - 43px);
+    height: 100%;
+    float: right;
+    color: var(--text);
+    padding: 0 0.5rem;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.dropDownSearchBar {
+    width: 500px;
+    height: auto;
+    float: right;
+    padding: 1rem 1rem;
+    border-radius: 20px;
+    background-color: #141821f3;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    transition: 0.2s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.dropDownSearchBar.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropDownSearchBar :deep(.loadingContainer) {
+    width: 100%;
+    height: 50px;
+    float: right;
+    justify-content: flex-start;
+}
+
+.dropDownSearchBar :deep(.loadingContainer svg) {
+    width: 18px;
+    height: 18px;
+    float: right;
+}
+
+.dropDownSearchBar :deep(.loadingContainer p) {
+    font-size: 14px;
+    color: white;
+}
+
+.dropDownSearchBar .empty {
+    width: 100%;
+    height: 100px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    color: var(--text);
+    font-family: 'yekan_Bold';
+}
+
+.show-more {
+    width: auto;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.8rem;
+    color: var(--text);
+    background-color: black;
+    border-radius: 12px;
+    font-size: 13px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.show-more:hover {
+    color: var(--theme);
+}
+
+.title_search {
+    width: 100%;
+    text-align: right;
+    float: right;
+    font-size: 14px;
+    color: white;
+}
+
+.searchResultContainer {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin-top: 7px;
+}
+
+.searchResultContainer :deep(.MovieBox) {
+    width: calc(100% / 4 - 5px);
+}
+
+@media(max-width: 1010px) {
+    .SearchBar {
+        position: absolute;
+        left: 0;
+    }
+}
+
+@media(max-width: 790px) {
+    .SearchBar.active {
+        width: 260px;
+    }
+}
+
+@media(max-width: 680px) {
+
+    .SearchBar,
+    .SearchBar .icon {
+        width: 47px;
+        height: 47px;
+    }
+
+    .SearchBar input {
+        width: calc(100% - 47px);
+    }
+
+    .SearchBar.active {
+        width: calc(100vw - 1.6rem);
+    }
+
+    .dropDownSearchBar {
+        width: 100%;
+    }
+}
+
+@media(max-width: 580px) {
+    .SearchBar.active {
+        width: calc(100vw - 1.4rem);
+    }
+}
+
+@media(max-width: 500px) {
+    .SearchBar.active {
+        width: calc(100vw - 1.2rem);
+    }
+}
+
+@media(max-width: 460px) {
+    .SearchBar.active {
+        width: calc(100vw - 1.2rem);
+    }
+}
+
+@media(max-width: 400px) {
+    .SearchBar.active {
+        width: calc(100vw - 1.1rem);
+    }
+}
+
+@media(max-width: 350px) {
+    .SearchBar.active {
+        width: calc(100vw - 1rem);
+    }
+}
+
+@media(max-width: 280px) {
+    .SearchBar.active {
+        width: calc(100vw - 0.8rem);
+    }
+}
+
+
+@media(max-width: 520px) {
+    .searchResultContainer {
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: none;
+        white-space: nowrap;
+    }
+
+    .searchResultContainer::-webkit-scrollbar {
+        display: none;
+    }
+
+    .searchResultContainer :deep(.MovieBox) {
+        flex: 0 0 auto;
+        width: 112px;
+    }
+}

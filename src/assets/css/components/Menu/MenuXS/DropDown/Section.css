@@ -1,0 +1,155 @@
+
+.Section {
+    width: 100%;
+    height: auto;
+    float: right;
+    border-radius: 18px;
+    padding: 0 1rem;
+    transition: 0.2s ease-in-out;
+}
+
+.Section.active {
+    background-color: black;
+}
+
+.Section .top_drp {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+
+.top_drp .title {
+    width: auto;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    color: white;
+}
+
+.top_drp .title :deep(svg) {
+    width: 22px;
+    height: 22px;
+    float: right;
+    fill: white;
+}
+.Section:nth-child(2) .top_drp .title :deep(svg) {
+    transform: translateY(-0.8px);
+}
+
+.down_icon {
+    width: 18px;
+    height: 18px;
+    float: right;
+    fill: white;
+    transform: rotate(90deg);
+    transition: 0.2s ease-in-out;
+}
+
+.Section.active .down_icon {
+    transform: rotate(0);
+}
+
+.bottom_drp {
+    width: 100%;
+    height: 0;
+    float: right;
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+}
+
+.bottom_content {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+   padding: 0.5rem 0 1.5rem;
+}
+
+
+
+:deep(.BoxList) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+:deep(.BoxList .title) {
+    width: 100%;
+    height: 20px;
+    text-align: right;
+    float: right;
+    border-right: solid 2px var(--theme);
+    padding-right: 0.5rem;
+    font-size: 15.5px;
+    color: white;
+    font-family: 'yekan_Medium';
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+:deep(.BoxList .itemsList) {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+:deep(.BoxList .item) {
+    width: 100%;
+    text-align: right;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--text2);
+    font-size: 14.5px;
+    position: relative;
+    padding-right: 0.8rem;
+    transition: 0.2s ease-in-out;
+    margin-right: 10px;
+}
+
+:deep(.BoxList .item::after) {
+    width: 7px;
+    height: 2px;
+    background-color: var(--text2);
+    border-radius: 50px;
+    position: absolute;
+    right: 0;
+    content: "";
+    transform: translateY(-0.5px);
+    transition: 0.2s ease-in-out;
+}
+
+:deep(.BoxList .item:hover) {
+    color: var(--text);
+}
+
+:deep(.BoxList .item:hover::after) {
+    background-color: var(--theme);
+}
+
+:deep(.loadingContainer .loading-title)
+{
+    font-size: 13px;
+    color: white;
+}

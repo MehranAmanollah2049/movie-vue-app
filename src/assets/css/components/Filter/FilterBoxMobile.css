@@ -1,0 +1,96 @@
+
+.FilterBoxMobile {
+    position: fixed;
+    inset: auto 0 -100vh 0;
+    background-color: var(--bg2);
+    border-radius: 35px 35px 0 0;
+    padding: 1.5rem 2rem 2rem;
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    z-index: 1501;
+    transition: 0.5s ease-in-out;
+}
+
+.FilterBoxMobile.active {
+    opacity: 1;
+    visibility: visible;
+    inset: auto 0 0 0;
+}
+
+.FilterBoxMobile::-webkit-scrollbar {
+    display: none;
+}
+
+.overlay_filter_box {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1500;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease-in-out;
+}
+
+.overlay_filter_box.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.topBox {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.topBox p {
+    font-size: 15px;
+    color: white;
+    font-family: 'morabba_Bold';
+    float: right;
+}
+
+.closeBtn {
+    width: 30px;
+    height: 30px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg3);
+    cursor: pointer;
+}
+
+.closeBtn svg {
+    width: 16px;
+    height: 16px;
+    float: right;
+    fill: white;
+}
+
+.bottomBox {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+:deep(.FilterBox) {
+    background-color: black;
+    border-radius: 25px;
+}

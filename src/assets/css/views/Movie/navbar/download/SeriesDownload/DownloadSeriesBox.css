@@ -1,0 +1,43 @@
+.DownloadSeriesBox {
+    width: 100%;
+    height: auto;
+    float: right;
+    border-radius: 30px;
+    background-color: #141821;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.topBox {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    gap: 8px;
+    background-color: #1d2129;
+}
+
+.topBox svg {
+    width: 25px;
+    height: 25px;
+    float: right;
+    fill: var(--theme);
+    transform: translateY(-0.8px);
+}
+
+.topBox p {
+    font-size: 16px;
+    color: white;
+    float: right;
+    font-family: 'yekan_Bold';
+}
+
+.bottomBox {
+    width: 100%;
+    height: auto;
+    float: right;
+}

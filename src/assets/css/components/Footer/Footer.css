@@ -1,0 +1,88 @@
+.footer {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #141821;
+    margin-top: auto;
+    padding: 1rem 0;
+}
+
+.footerSection {
+    width: var(--width);
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerSection .right {
+    width: auto;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.backtotop_icon {
+    width: 23px;
+    height: 23px;
+    float: right;
+    fill: var(--theme);
+    cursor: pointer;
+}
+
+.footerContent {
+    width: auto;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 0.1rem;
+}
+
+.footerContent :deep(.MenuItem) {
+    font-size: 15px;
+}
+
+.downloadapp {
+    width: auto;
+    height: 37px;
+    float: right;
+    background-color: #196422;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    border-radius: 50px;
+    color: white;
+    font-size: 14px;
+    font-family: 'yekan_Medium';
+    cursor: pointer;
+    box-shadow: 0 0 50px #19642267;
+    transition: 0.2s ease-in-out;
+}
+
+.downloadapp:hover {
+    box-shadow: none;
+    background-color: var(--bg3);
+}
+
+@media(max-width: 1010px) {
+
+    .footer {
+        padding: 4rem 0 0;
+        background-color: transparent;
+    }
+
+    .footerSection {
+        display: none;
+    }
+}

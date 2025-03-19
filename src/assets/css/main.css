@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'yekan_Regular';
+    src: url(@/assets/font/yekanBakh/Yekan-Bakh-FaNum-04-Regular.woff);
+}
+
+@font-face {
+    font-family: 'yekan_Medium';
+    src: url(@/assets/font/yekanBakh/Yekan-Bakh-FaNum-05-Medium.woff);
+}
+
+@font-face {
+    font-family: 'yekan_Bold';
+    src: url(@/assets/font/yekanBakh/Yekan-Bakh-FaNum-06-Bold.woff);
+}
+
+@font-face {
+    font-family: 'yekan_Heavy';
+    src: url(@/assets/font/yekanBakh/Yekan-Bakh-FaNum-07-Heavy.woff);
+}
+
+@font-face {
+    font-family: 'yekan_Fat';
+    src: url(@/assets/font/yekanBakh/Yekan-Bakh-FaNum-08-Fat.woff);
+}
+
+@font-face {
+    font-family: 'morabba_Bold';
+    src: url(@/assets/font/morabba/Morabba-Bold.woff);
+}
+
+@font-face {
+    font-family: 'bison_Bold';
+    src: url(@/assets/font/bison/Bison-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'dmsans_Medium';
+    src: url(@/assets/font/dm-sans/DMSans-Medium.ttf);
+}
+
+:root {
+    --bg: black;
+    --bg2: #161d27;
+    --bg3: #10141a;
+    --shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0px 4px 60px rgba(0, 0, 0, .04);
+    --success: #38cb6e;
+    --error: #f43f5e;
+    --width: 1450px;
+    --theme: #eb8307;
+    --theme2: #82490D;
+    --shadow2: 0 8px 60px 0 rgba(245, 173, 17, .3);
+    --text: #dedfe1;
+    --text2: #8e8886;
+    --loading: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    --font: 'dmsans_Medium'
+}
+
+.loadingBox {
+    background: var(--loading);
+    background-size: 1000px 104px;
+    animation: loading 1.25s linear infinite forwards;
+}
+
+.textloading {
+    height: 20px;
+    border-radius: 50px;
+    background: var(--loading);
+    background-size: 1000px 104px;
+    animation: loading_text 2s linear infinite forwards;
+}
+
+@keyframes loading {
+    0% {
+        background-position: -468px 0
+    }
+
+    100% {
+        background-position: 468px 0
+    }
+}
+
+@keyframes loading_text {
+    0% {
+        background-position: -200px 0
+    }
+
+    60% {
+        background-position: 200px 0
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'yekan_Regular';
+}
+
+
+
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--bg);
+    direction: rtl;
+}
+
+#app {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    float: right;
+    position: relative;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#nprogress .bar {
+    background-color: var(--theme) !important;
+    height: 3px !important;
+}
+
+#nprogress .peg {
+    box-shadow: 0 0 10px var(--theme), 0 0 5px var(--theme) !important;
+}
+
+.swiper-container {
+    transform: none;
+}
+
+@media(max-width: 1500px) {
+    :root {
+        --width: 95%
+    }
+}

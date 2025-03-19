@@ -1,0 +1,86 @@
+.paginationContainer {
+    width: 100%;
+    height: auto;
+    float: right;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.paginationContainer .btn {
+    width: auto;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.paginationContainer .btn.disable {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.paginationContainer .btn svg {
+    width: 21px;
+    height: 21px;
+    float: right;
+    fill: white;
+}
+
+.paginationContainer .pages {
+    width: auto;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.paginationContainer .pages .page {
+    width: 35px;
+    height: 35px;
+    float: right;
+    border-radius: 5px;
+    border: solid 1.5px #ffffff23;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: 'yekan_Medium';
+    color: white;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+.paginationContainer .pages .page.active {
+    border-color: var(--theme);
+    background-color: var(--theme);
+    color: #fff;
+}
+
+.paginationContainer .pages .page:not(.active):hover {
+    background-color: white;
+    border-color: transparent;
+    color: var(--title);
+}
+
+@media(max-width: 500px) {
+    .paginationContainer .pages {
+        width: 100%;
+        order: 0;
+    }
+
+    .paginationContainer .btn:first-child {
+        order: 1;
+    }
+    .paginationContainer .btn:last-child {
+        order: 2;
+    }
+}

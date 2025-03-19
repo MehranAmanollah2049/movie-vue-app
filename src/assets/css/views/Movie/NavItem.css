@@ -1,0 +1,65 @@
+
+.NavItem {
+    width: auto;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+    position: relative;
+    transition: 0.1s ease-in-out;
+}
+
+.NavItem p {
+    font-size: 15px;
+    color: white;
+    float: right;
+    font-family: 'yekan_Medium';
+    transition: 0.1s ease-in-out;
+}
+
+.NavItem :deep(svg) {
+    width: 21px;
+    height: 21px;
+    float: right;
+    fill: white;
+    transform: translateY(-1px);
+    transition: 0.1s ease-in-out;
+}
+
+.NavItem:first-child :deep(svg)
+{
+    width: 19px;
+    height: 19px;
+}
+
+.NavItem.active p {
+    color: var(--theme);
+}
+
+.NavItem.active :deep(svg) {
+    fill: var(--theme);
+}
+
+.count {
+    position: absolute;
+    width: auto;
+    min-width: 16px;
+    height: 16px;
+    background-color: var(--theme);
+    color: white;
+    font-size: 11px;
+    border-radius: 50px;
+    top: -7px;
+    right: -7px;
+    padding: 0.1rem 0.2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    box-shadow: 0 0 10px 0 #eb840760;
+    font-family: 'yekan_Medium';
+}
+

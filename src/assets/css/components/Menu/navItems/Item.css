@@ -1,0 +1,17 @@
+
+.MenuItem {
+    width: auto;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: var(--text);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.MenuItem:hover {
+    color: white;
+}

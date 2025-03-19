@@ -1,0 +1,60 @@
+
+.DownloadMovieBox {
+    width: 100%;
+    height: auto;
+    float: right;
+    border-radius: 40px;
+    background-color: var(--bg2);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.topHead {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+}
+
+.topHead svg {
+    width: 25px;
+    height: 25px;
+    float: right;
+    fill: var(--theme);
+    transform: translateY(-0.8px);
+}
+
+.topHead p {
+    font-size: 16px;
+    color: white;
+    float: right;
+    font-family: 'yekan_Bold';
+}
+
+.bottomParent {
+    width: 100%;
+    height: auto;
+    float: right;
+    background-color: black;
+    padding: 1.5rem;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+@media(max-width: 1300px) {
+    .DownloadMovieBox {
+        padding: 2rem 1rem;
+    }
+
+    .bottomParent {
+        padding: 1.3rem;
+    }
+}

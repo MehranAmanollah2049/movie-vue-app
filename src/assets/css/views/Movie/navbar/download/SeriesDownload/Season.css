@@ -1,0 +1,148 @@
+
+.Season {
+    width: 100%;
+    height: auto;
+    float: right;
+    transition: 0.2s ease-in-out;
+}
+
+.Season:not(:last-child)
+{
+    border-bottom: solid 1px black;
+}
+
+.Season.active {
+    border-bottom: none;
+}
+
+.topSeason {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem 1.5rem;
+    cursor: pointer;
+}
+
+.left_season {
+    width: auto;
+    height: auto;
+    float: left;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+.arrow {
+    width: 30px;
+    height: 30px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: hsla(0,0%,77%,.1);
+    box-shadow: 0 4px 4px rgba(0,0,0,.1);
+    transform: rotate(180deg);
+    transition: 0.2s ease-in-out;
+}
+
+.Season.active .arrow {
+    transform: rotate(0deg);
+}
+
+.arrow svg {
+    width: 12px;
+    height: 12px;
+    fill: white;
+    float: right;
+    transform: rotate(-180deg);
+    transition: 0.2s ease-in-out;
+}
+
+
+.right_season {
+    width: auto;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.right_season .title {
+    font-size: 16px;
+    color: white;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    font-family: 'yekan_Medium';
+}
+
+.right_season .title svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--theme);
+    float: right;
+    transform: translateY(-0.5px);
+}
+
+.status {
+    width: auto;
+    height: 40px;
+    float: right;
+    background-color: black;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.5rem;
+    color: white;
+    font-family: 'yekan_Medium';
+    font-size: 15px;
+}
+
+.bottomSeason {
+    width: 100%;
+    height: auto;
+    float: right;
+    overflow: hidden;
+    padding: 0 1rem;
+    transition: 0.4s ease-in-out;
+}
+
+.Season:last-child.active {
+    padding-bottom: 1rem;
+}
+
+.bottomContent {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    border-radius: 35px;
+    padding: 1.8rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+@media(max-width: 1300px) {
+    .bottomContent {
+        padding: 1.3rem;
+    }
+
+}
+
+@media(max-width: 300px) {
+    .right_season {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}

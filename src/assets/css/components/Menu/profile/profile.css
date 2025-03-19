@@ -1,0 +1,93 @@
+
+.profile {
+    width: auto;
+    height: auto;
+    float: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    position: relative;
+}
+
+.profile img {
+    width: 34px;
+    height: 34px;
+    float: left;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.profile .username {
+    font-size: 15px;
+    font-family: var(--font);
+    float: left;
+    color: white;
+}
+
+.profile .down_icon {
+    width: 15px;
+    height: 15px;
+    float: right;
+    fill: white;
+}
+
+.profileDropDown {
+    position: absolute;
+    left: 0;
+    width: auto;
+    min-width: 150px;
+    height: auto;
+    padding: 1rem;
+    background-color: #141821e7;
+    border-radius: 15px;
+    left: 0;
+    top: calc(100% + 10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease-in-out;
+}
+
+.profile:hover .profileDropDown {
+    opacity: 1;
+    visibility: visible;
+}
+
+.logOut {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    white-space: nowrap;
+    padding-left: 1.5rem;
+}
+
+.logOut .logout_icon {
+    width: 18px;
+    height: 18px;
+    float: right;
+    fill: white;
+    transition: 0.2s ease-in-out;
+}
+
+.logOut:hover {
+    color: var(--error);
+}
+
+.logOut:hover .logout_icon {
+    fill: var(--error);
+}
+
+@media(max-width: 1010px) {
+    .profile {
+        display: none;
+    }
+}

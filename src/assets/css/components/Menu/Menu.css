@@ -1,0 +1,353 @@
+
+.MenuContainer {
+    width: 100%;
+    height: 93px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    transition: 0.3s ease-in-out;
+    border-bottom: solid 1.5px transparent;
+}
+
+.MenuContainer.active {
+    height: 76px;
+    background-color: #161d27;
+}
+
+.MenuSection {
+    width: var(--width);
+    height: 100%;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rightMenu , .leftMenu {
+    width: auto;
+    height: 100%;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.leftMenu {
+    justify-content: flex-end;
+    gap: 8px;
+    
+}
+
+.rightMenu {
+    gap: 35px;
+}
+
+.rightMenu :deep(.logo img)  {
+    width: auto;
+    height: 34px;
+    float: right;
+    object-fit: contain;
+    transform: translateY(-4px);
+}
+
+.MenuContent {
+    width: auto;
+    height: 100%;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+}
+
+.MenuDrpItem {
+    width: auto;
+    height: 47px;
+    background-color: black;
+    border-radius: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding: 0 0.8rem 0 0.5rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    position: relative;
+}
+
+.MenuDrpItem:hover {
+    background-color: var(--bg2);
+}
+
+.MenuDrpItem .category_icon {
+    width: 18px;
+    height: 18px;
+    float: right;
+    fill: var(--text);
+    transform: translateY(-0.3px);
+}
+
+.MenuDrpItem .text {
+    font-size: 14px;
+    color: white;
+    float: right;
+    margin-right: 4px;
+}
+
+.MenuDrpItem .down_icon {
+    width: 17px;
+    height: 17px;
+    float: right;
+    fill: var(--text);
+}
+
+.dropDown {
+    width: 750px;
+    height: auto;
+    float: right;
+    padding: 1rem 1rem;
+    border-radius: 20px;
+    background-color: rgba(20, 24, 33, 0.934);
+    position: absolute;
+    z-index: 20;
+    top: calc(100% + 10px);
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.98);
+    transform-origin: top right;
+    transition: 0.2s ease-in-out;
+}
+
+.MenuDrpItem:hover .dropDown {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.dropDown .rightSection {
+    width: 160px;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    border-left: solid 1.5px rgba(255, 255, 255, 0.079);
+    padding-left: 1rem;
+}
+
+.dropDown .leftSection {
+    width: calc(100% - 160px);
+    float: right;
+    padding: 0.5rem 1.4rem;
+}
+
+.dropDown .drpSlides {
+    width: 100%;
+    height: 0;
+    float: right;
+    transition: 0.2s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    pointer-events: none;
+}
+
+.MenuDrpItem:hover .dropDown .drpSlides {
+    pointer-events: all;
+}
+
+.dropDown .drpSlides.active {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+}
+
+.dropDown .drpSlides:first-child :deep(.DrpBox) {
+    width: calc(100% / 3 - 20px);
+}
+
+.dropDown .drpSlides:nth-child(3) {
+    gap: 15px;
+}
+
+.dropDown .drpSlides:nth-child(3) :deep(.DrpBox) {
+    width: calc(100% / 4 - 12px);
+    margin-bottom: 5px;
+}
+
+.dropDown .drpSlides:nth-child(2) .BoxList {
+    width: calc(100% / 2 - 20px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dropDown .BoxList .title {
+    width: 100%;
+    height: 20px;
+    text-align: right;
+    float: right;
+    border-right: solid 2px var(--theme);
+    padding-right: 0.5rem;
+    font-size: 15.5px;
+    color: white;
+    font-family: 'yekan_Medium';
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dropDown .BoxList .itemsList {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.dropDown .BoxList .item {
+    width: 100%;
+    text-align: right;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--text2);
+    font-size: 14.5px;
+    position: relative;
+    padding-right: 0.8rem;
+    transition: 0.2s ease-in-out;
+}
+
+.dropDown .BoxList .item::after {
+    width: 5px;
+    height: 5px;
+    background-color: var(--text2);
+    border-radius: 50px;
+    position: absolute;
+    right: 0;
+    content: "";
+    transform: translateY(-0.5px);
+    transition: 0.2s ease-in-out;
+}
+
+.dropDown .BoxList .item:hover {
+    color: var(--text);
+}
+
+.dropDown .BoxList .item:hover::after {
+    background-color: var(--text);
+}
+
+.authenticationButton {
+    width: auto;
+    height: 43px;
+    float: left;
+    border-radius: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    padding: 0 1rem;
+    color: white;
+    background-color: var(--theme2);
+    font-size: 14px;
+    transition: 0.2s ease-in-out;
+}
+
+.authenticationButton svg {
+    width: 18px;
+    height: 18px;
+    float: right;
+    transform: translateY(1.5px);
+}
+
+.authenticationButton svg g {
+    stroke: white;
+}
+
+.authenticationButton:hover {
+    filter: brightness(1.3);
+}
+
+.leftMenu :deep(.loading-svg)
+{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* responsive */
+
+.menuBerger {
+    width: 43px;
+    height: 43px;
+    float: right;
+    background-color: black;
+    border-radius: 15px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0.8rem;
+    cursor: pointer;
+}
+
+.menuBerger .line {
+    width: 100%;
+    height: 1.4px;
+    background-color: white;
+    float: right;
+    border-radius: 50px;
+}
+
+@media(max-width: 1010px)
+{
+    .authenticationButton , .MenuContent {
+        display: none;
+    }
+
+    .menuBerger {
+        display: flex;
+    }
+    
+    .leftMenu {
+        width: 43px;
+        position: relative;
+    }
+
+}
+
+@media(max-width: 680px) 
+{
+    .menuBerger {
+        display: none;
+    }
+
+    .MenuContainer {
+        height: 80px;
+    }
+
+    .MenuContainer.active :deep(.dropDownSearchBar) {
+        top: calc(100% + 20px);
+    }
+}

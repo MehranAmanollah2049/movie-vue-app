@@ -1,0 +1,164 @@
+
+.AutheticationContainer {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.authSection {
+    width: 450px;
+    height: auto;
+    float: right;
+    border-radius: 22px;
+    padding: 1.8rem 2rem;
+    background-color: var(--bg2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.authSection.verify , .authSection.top {
+    padding: 2.5rem 2rem 1.8rem;
+}
+
+.pagesContent {
+    width: auto;
+    height: 55px;
+    float: right;
+    background-color: black;
+    border-radius: 15px;
+    padding: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.pagesContent a {
+    width: 100px;
+    height: 100%;
+    float: right;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;   
+    padding: 0 1.5rem; 
+    font-size: 15px;
+    font-family: 'yekan_Medium';
+}
+
+.pagesContent a.active {
+    background-color: var(--theme2);
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    float: right;
+    color: white;
+    font-family: 'morabba_Bold';
+    font-size: 20px;
+    margin-top: -5px;
+}
+
+
+
+.form {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 1.5rem;
+}
+
+.forgetpass_link {
+    width: 100%;
+    text-align: right;
+    float: right;
+    font-size: 14px;
+    color: var(--theme);
+}
+
+.submitButton {
+    width: 100%;
+    height: 60px;
+    float: right;
+    font-size: 16px;
+    font-family: 'yekan_Bold';
+    color: white;
+    border-radius: 13px;
+    background-color: var(--theme2);
+    border: none;
+    outline: none;
+    box-shadow: var(--shadow2);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submitButton:hover {
+    box-shadow: none;
+}
+
+.timer {
+    width: auto;
+    height: 30px;
+    float: right;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    background-color: var(--bg3);
+    padding: 0 1rem;
+    color: white;
+    font-size: 14px;
+}
+
+.timer span {
+    color: var(--theme);
+}
+
+.authSection :deep(.verify-int) {
+    font-size: 17px;
+}
+
+.timer.resend {
+    cursor: pointer;
+}
+
+.submitButton :deep(svg) {
+    width: 23px;
+    height: 23px;
+    transform: translateY(-1px);
+}
+
+
+@media(max-width: 600px)
+{
+    .AutheticationContainer {
+        padding: 0;
+    }
+
+    .authSection {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        border-radius: 0;
+        padding: 3rem 1.5rem;
+    }
+}

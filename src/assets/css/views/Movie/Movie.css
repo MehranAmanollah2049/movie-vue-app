@@ -1,0 +1,125 @@
+
+.navBarContainer{
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg2);
+}
+
+.navBarContent {
+    width: calc(var(--width) - 90px);
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1.5rem 0;
+    gap: 40px;
+}
+
+.main_content_container {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_content {
+    width: calc(var(--width) - 90px);
+    height: auto;
+    float: right;
+    position: relative;
+    padding: 3rem 0;
+}
+
+.loadingBox_spinner {
+    width: 100%;
+    height: 200px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loadingBox_spinner :deep(.loading-title)
+{
+    color: white;
+}
+
+@media(max-width: 1300px) {
+    .navBarContent {
+        width: var(--width);
+        justify-content: flex-start;
+        padding: 1rem 1.5rem;
+    }
+
+    .navBarContainer::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .main_content {
+        width: var(--width);
+    }
+}
+
+@media(max-width: 500px) {
+    .navBarContent {
+        justify-content: space-around;
+    }
+
+    :deep(.NavItem) {
+        width: calc(100% / 3 - 10px);
+        flex-direction: column;
+    }
+
+    :deep(.NavItem p) {
+        font-size: 13.5px;
+    }
+
+    :deep(.count) {
+        right: 2.3rem;
+    }
+}
+
+@media(max-width: 415px) {
+    .navBarContent {
+        justify-content: space-between;
+        padding: 1rem 0;
+        gap: 0;
+    }
+
+    :deep(.NavItem) {
+        width: calc(100% / 3);
+    }
+
+    :deep(.NavItem p) {
+        font-size: 13px;
+    }
+}
+
+@media(max-width: 330px) {
+    .navBarContent {
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: none;
+        padding: 1rem 1.5rem;
+        justify-content: flex-start;
+        gap: 40px;
+    }
+
+    .navBarContainer::-webkit-scrollbar {
+        display: none;
+    }
+
+    :deep(.NavItem) {
+        width: auto;
+        flex: 0 0 auto;
+    }
+}

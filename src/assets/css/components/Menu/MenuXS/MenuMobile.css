@@ -1,0 +1,164 @@
+
+.MenuMobile {
+    position: fixed;
+    top: 0;
+    right: calc(-100vw - 100px);
+    width: 330px;
+    height: 100vh;
+    float: right;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    z-index: 1002;
+    background-color: #111723;
+    padding: 1.3rem 1.3rem 2.5rem 1.3rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease-in-out;
+    display: none;
+}
+
+.MenuMobile.active {
+    opacity: 1;
+    visibility: visible;
+    right: 0;
+}
+
+.MenuMobile::-webkit-scrollbar {
+    display: none;
+}
+
+.MenuMobile_overlay {
+    position: fixed;
+    inset: 0;
+    background-color: #000000a7;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease-in-out;
+    display: none;
+}
+
+.MenuMobile_overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.MenuMobile .topMenu {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.MenuMobile .topMenu :deep(.logo) {
+    width: auto;
+    height: 37px;
+    float: right;
+}
+
+.MenuMobile .topMenu :deep(.logo img) {
+    width: auto;
+    height: 100%;
+    float: right;
+    object-fit: contain;
+}
+
+.MenuMobile .topMenu .closeBtn {
+    width: 45px;
+    height: 45px;
+    float: right;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #282524;
+    cursor: pointer;
+}
+
+.MenuMobile .topMenu .closeBtn svg {
+    width: 27px;
+    height: 27px;
+    float: right;
+    fill: white;
+}
+
+.downloadApp {
+    width: 100%;
+    height: 58px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: #279b2c;
+    color: white;
+    font-family: 'yekan_Medium';
+    border-radius: 18px;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 25px 0;
+}
+
+.downloadApp svg {
+    width: 20px;
+    height: 20px;
+    float: right;
+    fill: white;
+}
+
+.MenuContentMobile {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--bg3);
+    border-radius: 25px;
+    padding: 1.3rem 1.5rem;
+    cursor: pointer;
+}
+
+.link span {
+    font-size: 15px;
+    color: white;
+    float: right;
+    font-family: 'yekan_Medium';
+}
+
+.link svg {
+    width: 30px;
+    height: 30px;
+    float: right;
+    fill: #e4e4e5;
+    transform: translateY(-0.5px);
+}
+
+.link:first-child svg {
+    width: 28px;
+    height: 28px;
+}
+
+
+@media(max-width: 1010px)
+{
+    .MenuMobile , .MenuMobile_overlay {
+        display: block;
+    }
+
+}

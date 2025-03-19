@@ -1,0 +1,309 @@
+.containerAll {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+    margin-top: 93px;
+}
+
+.sectionAll {
+    width: var(--width);
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.FilterSection {
+    width: 280px;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.MoviesSection {
+    width: calc(100% - 300px);
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.MovieCardLoading {
+    width: calc(100% / 5 - 12px);
+    height: 300px;
+    float: right;
+    border-radius: 20px;
+}
+
+.MoviesSection :deep(.MovieCard) {
+    width: calc(100% / 5 - 12px);
+}
+
+.MoviesSection :deep(.MovieCard .banner) {
+    height: 330px;
+}
+
+.empty {
+    width: 100%;
+    height: 200px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: var(--text);
+    font-family: 'yekan_Medium';
+}
+
+/* resposive */
+.topFilterMobile {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 30px;
+}
+
+.FilterButtons {
+    width: calc(100% / 2 - 5px);
+    height: 45px;
+    float: right;
+    border: solid 1.5px var(--bg2);
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.FilterButtons span {
+    font-size: 15px;
+    color: white;
+    float: right;
+}
+
+.FilterButtons svg {
+    width: 18px;
+    height: 18px;
+    float: right;
+    stroke: white;
+}
+
+.FilterButtons:nth-child(2) svg {
+    transform: translateY(2px);
+}
+
+@media(max-width: 1500px) {
+    .MoviesSection :deep(.MovieCard .banner) , .MovieCardLoading {
+        height: 300px;
+    }
+}
+
+@media(max-width: 1420px) {
+    .MoviesSection :deep(.MovieCard .banner) , .MovieCardLoading {
+        height: 290px;
+    }
+}
+
+@media(max-width: 1360px) {
+    .MoviesSection :deep(.MovieCard .banner) , .MovieCardLoading {
+        height: 270px;
+    }
+}
+
+@media(max-width: 1280px) {
+
+    .MoviesSection :deep(.MovieCard .banner) , .MovieCardLoading {
+        height: 250px;
+    }
+}
+
+@media(max-width: 1200px) {
+
+    .MoviesSection :deep(.MovieCard) , .MovieCardLoading {
+        width: calc(100% / 4 - 12px);
+    }
+
+
+    .MoviesSection :deep(.MovieCard .banner) , .MovieCardLoading {
+        height: 290px;
+    }
+}
+
+@media(max-width: 1100px) {
+
+    .MoviesSection :deep(.MovieCard .banner) , .MovieCardLoading {
+        height: 270px;
+    }
+
+    .FilterSection {
+        width: 250px;
+    }
+
+    .MoviesSection {
+        width: calc(100% - 270px);
+    }
+}
+
+@media(max-width: 1050px) {
+
+    .MoviesSection :deep(.MovieCard .banner) , .MovieCardLoading {
+        height: 250px;
+    }
+
+}
+
+@media(max-width: 1010px) {
+    .containerAll {
+        padding: 1rem 0 3rem;
+    }
+
+    .FilterSection {
+        display: none;
+    }
+
+    .MoviesSection {
+        width: 100%;
+    }
+
+    .MoviesSection :deep(.MovieCard) , .MovieCardLoading {
+        width: calc(100% / 5 - 12px);
+    }
+
+
+    .MoviesSection :deep(.MovieCard .banner) , .MovieCardLoading {
+        height: 260px;
+    }
+
+    .topFilterMobile {
+        display: flex;
+    }
+}
+
+@media(max-width: 950px) {
+
+    .MoviesSection :deep(.MovieCard .banner) , .MovieCardLoading {
+        height: 240px;
+    }
+}
+
+@media(max-width: 860px) {
+    .MoviesSection :deep(.MovieCard .banner) , .MovieCardLoading {
+        height: 220px;
+    }
+}
+
+@media(max-width: 790px) {
+
+    .MoviesSection :deep(.MovieCard) , .MovieCardLoading {
+        width: calc(100% / 4 - 12px);
+    }
+
+
+    .MoviesSection :deep(.MovieCard .banner) , .MovieCardLoading {
+        height: 270px;
+    }
+}
+
+@media(max-width: 730px) {
+    .MoviesSection :deep(.MovieCard .banner) , .MovieCardLoading {
+        height: 240px;
+    }
+}
+
+@media(max-width: 670px) {
+    .MoviesSection :deep(.MovieCard .banner) , .MovieCardLoading {
+        height: 210px;
+    }
+
+}
+
+@media(max-width: 610px) {
+    .MoviesSection :deep(.MovieCard) , .MovieCardLoading {
+        width: calc(100% / 3 - 10px);
+    }
+
+    .MoviesSection :deep(.MovieCard .banner) , .MovieCardLoading {
+        height: 260px;
+    }
+}
+
+@media(max-width: 570px) {
+
+    .MoviesSection :deep(.MovieCard .banner) , .MovieCardLoading {
+        height: 210px;
+    }
+}
+
+
+@media(max-width: 500px) {
+
+    .MoviesSection :deep(.MovieCard .banner) , .MovieCardLoading {
+        height: 200px;
+    }
+}
+
+@media(max-width: 460px) {
+
+    .MoviesSection :deep(.MovieCard .banner) , .MovieCardLoading {
+        height: 190px;
+    }
+}
+
+@media(max-width: 440px) {
+
+    .MoviesSection :deep(.MovieCard .banner) , .MovieCardLoading {
+        height: 180px;
+    }
+}
+
+@media(max-width: 410px) {
+
+    .MoviesSection :deep(.MovieCard) , .MovieCardLoading {
+        width: calc(100% / 2 - 10px);
+    }
+
+
+    .MoviesSection :deep(.MovieCard .banner) , .MovieCardLoading {
+        height: 260px;
+    }
+}
+
+@media(max-width: 400px) {
+
+    .MoviesSection :deep(.MovieCard .banner) , .MovieCardLoading {
+        height: 240px;
+    }
+}
+
+@media(max-width: 390px) {
+
+    .MoviesSection :deep(.MovieCard .banner) , .MovieCardLoading {
+        height: 230px;
+    }
+}
+
+
+@media(max-width: 350px) {
+
+    .MoviesSection :deep(.MovieCard .banner) , .MovieCardLoading {
+        height: 180px;
+    }
+}

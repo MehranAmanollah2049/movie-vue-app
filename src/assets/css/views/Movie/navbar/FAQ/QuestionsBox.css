@@ -1,0 +1,148 @@
+
+.QuestionsBox {
+    width: 100%;
+    height: auto;
+    float: right;
+    border-radius: 40px;
+    background-color: var(--bg2);
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.QuestionsItem {
+    width: 100%;
+    height: auto;
+    float: right;
+    transition: 0.2s ease-in-out;
+}
+
+.QuestionsItem.active {
+    padding-bottom: 1rem;
+}
+
+.QuestionsBox :deep(.QuestionsItem:not(:first-child)) {
+    border-top: solid 1.5px #0a0c0f;
+}
+
+.QuestionsItem .top {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem 1rem;
+    cursor: pointer;
+}
+
+.arrow {
+    width: 30px;
+    height: 30px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: hsla(0,0%,77%,.1);
+    box-shadow: 0 4px 4px rgba(0,0,0,.1);
+}
+
+.arrow svg {
+    width: 12px;
+    height: 12px;
+    fill: white;
+    float: right;
+    transform: rotate(-180deg);
+    transition: 0.2s ease-in-out;
+}
+
+.QuestionsItem.active .arrow svg {
+    transform: rotate(0);
+}
+
+.QuestionsItem .top .title {
+    width: auto;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.QuestionsItem .top .title svg {
+    width: 22px;
+    height: 22px;
+    float: right;
+    fill: var(--theme);
+}
+
+.QuestionsItem .top .title span {
+    font-size: 16px;
+    float: right;
+    color: white;
+    font-family: 'yekan_Medium';
+}
+
+.bottom {
+    width: 100%;
+    height: 0;
+    float: right;
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+}
+
+.content {
+    width: 100%;
+    height: auto;
+    float: right;
+    padding: 0.8rem 1.8rem;
+    background-color: black;
+    border-radius: 30px;
+}
+
+.content p {
+    width: 100%;
+    text-align: right;
+    float: right;
+    font-size: 14px;
+    color: #cecece;
+    line-height: 28px;
+    font-family: 'yekan_Medium';
+}
+
+@media(max-width: 1300px) {
+    .QuestionsBox {
+        padding: 1rem;
+    }
+    .QuestionsItem .top .title {
+        width: calc(100% - 40px);
+    }
+}
+
+@media(max-width: 500px) {
+    .QuestionsItem .top .title span {
+        font-size: 14.5px;
+        width: calc(100% - 25px);
+    }
+
+    .QuestionsItem .top .title svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .arrow {
+        width: 27px;
+        height: 27px;
+    }
+    .arrow svg {
+        width: 10px;
+        height: 10px;
+    }
+
+    .content p {
+        font-size: 13px;
+        line-height: 25px;
+    }
+}

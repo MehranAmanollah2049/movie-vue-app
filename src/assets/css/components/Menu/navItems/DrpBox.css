@@ -1,0 +1,48 @@
+
+.DrpBox {
+    width: auto;
+    height: 20px;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.DrpBox.border {
+    border-right: solid 2px var(--theme);
+    padding-right: 0.6rem;
+}
+
+.DrpBox.border:hover {
+    padding-right: 0.8rem;
+}
+
+.DrpBox p {
+    font-size: 15px;
+    color: var(--text);
+    float: right;
+    transition: 0.2s ease-in-out;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+.DrpBox.border p {
+    font-size: 16px;
+}
+
+.DrpBox p span {
+    font-size: 14px;
+    color: var(--text2);
+}
+
+.DrpBox p span.sm {
+    font-size: 13px;
+}
+
+.DrpBox:hover p {
+    color: var(--theme);
+}

@@ -1,0 +1,364 @@
+
+.HomeSectionContainer {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.HomeSectionContainer.last {
+    padding: 2rem 0 4rem;
+}
+
+.HomeSection {
+    width: var(--width);
+    height: auto;
+    float: right;
+}
+
+.topSection {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.topSection .right {
+    width: auto;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.topSection .right .icon {
+    width: 68px;
+    height: 68px;
+    float: right;
+    background-color: rgba(244,165,70,.1);
+    border-radius: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topSection .right .icon svg {
+    width: 35px;
+    height: 35px;
+    float: right;
+    fill: var(--theme);
+}
+
+.topSection .right p {
+    font-size: 21px;
+    color: white;
+    font-family: 'morabba_Bold';
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.topSection .right p span {
+    color: var(--text);
+    font-size: 16px;
+    margin-top: -3px;
+    font-family: 'yekan_Regular';
+}
+
+.seeAll {
+    width: auto;
+    height: auto;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text);
+    font-family: 'yekan_Medium';
+}
+
+.seeAll .arrow {
+    width: 30px;
+    height: 30px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: rgba(244,165,70,.1);
+    transform: translateY(-1px);
+}
+
+.seeAll .arrow svg {
+    width: 11px;
+    height: 11px;
+    float: right;
+    fill: white;
+    transform: translateY(-1px);
+}
+
+.bottomSection {
+    width: 100%;
+    height: auto;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.bottomSection :deep(.SeriesCard)
+{
+    width: calc(100% / 4 - 15px);
+}
+
+:deep(.seriesCardLoading) {
+    width: calc(100% / 4 - 15px);
+    height: 200px;
+    float: right;
+    border-radius: 15px;
+}
+
+
+.bottomSection :deep(.MovieCard) {
+    width: calc(100% / 7 - 18px);
+}
+
+:deep(.MovieCardLoading) {
+    width: calc(100% / 7 - 18px);
+    height: 290px;
+    border-radius: 15px;
+    float: right;
+}
+
+@media(max-width: 1420px) {
+    .bottomSection :deep(.MovieCard .banner) {
+        height: 270px;
+    }
+
+    :deep(.MovieCardLoading) {
+        height: 270px;
+    }
+}
+
+@media(max-width: 1330px) {
+    .bottomSection :deep(.MovieCard) , :deep(.MovieCardLoading) {
+        width: calc(100% / 6 - 18px);
+    }
+
+    .bottomSection :deep(.MovieCard .banner) {
+        height: 290px;
+    }
+
+    :deep(.MovieCardLoading) {
+        height: 290px;
+    }
+}
+
+
+@media(max-width: 1220px) {
+    .bottomSection :deep(.MovieCard) , :deep(.MovieCardLoading) {
+        width: calc(100% / 5 - 18px);
+    }
+
+    .bottomSection :deep(.MovieCard .banner) {
+        height: 300px;
+    }
+
+    :deep(.MovieCardLoading) {
+        height: 300px;
+    }
+}
+
+@media(max-width: 1200px) {
+    .bottomSection {
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: none;
+        flex-wrap: nowrap;
+        padding: 0 1.2rem;
+    }
+
+    .bottomSection::-webkit-scrollbar {
+        display: none;
+    }
+
+    .bottomSection :deep(.SeriesCard) , :deep(.seriesCardLoading) {
+        width: 330px;
+        flex: 0 0 auto;
+    }
+
+    :deep(.seriesCardLoading)  {
+        height: 170px;
+    }
+
+    .HomeSectionContainer.last .bottomSection {
+        padding: 1rem 1.2rem;
+    }
+
+    .bottomSection :deep(.MovieCard) , :deep(.MovieCardLoading) {
+        width: 180px;
+        flex: 0 0 auto;
+    }
+
+    .bottomSection :deep(.MovieCard .banner) {
+        height: 260px;
+    }
+
+    :deep(.MovieCardLoading) {
+        height: 260px;
+    }
+
+    .HomeSection {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .topSection {
+        width: var(--width);
+    }
+    
+}
+
+
+@media(max-width: 1010px) {
+    .topSection .right .icon {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .topSection .right .icon svg {
+        width: 27px;
+        height: 27px;
+    }
+
+    .topSection .right p  {
+        font-size: 18px;
+    }
+
+    .topSection .right p span {
+        font-size: 14px;
+    }
+
+    .seeAll .arrow {
+        width: 25px;
+        height: 25px;
+    }
+
+    .seeAll .arrow svg {
+        width: 9px;
+        height: 9px;
+    }
+
+    .HomeSectionContainer {
+        padding: 1rem 0;
+    }
+}
+
+@media(max-width: 720px) {
+    .bottomSection :deep(.SeriesCard) , :deep(.seriesCardLoading) {
+        width: 280px;
+        flex: 0 0 auto;
+    }
+
+    :deep(.seriesCardLoading)  {
+        height: 150px;
+    }
+}
+
+@media(max-width: 650px) {
+    .bottomSection :deep(.MovieCard) , :deep(.MovieCardLoading) {
+        width: 150px;
+    }
+
+    .bottomSection :deep(.MovieCard .banner) {
+        height: 220px;
+    }
+
+    :deep(.MovieCardLoading) {
+        height: 220px;
+    }
+}
+
+@media(max-width: 500px) {
+    .topSection .right .icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .topSection .right .icon svg {
+        width: 23px;
+        height: 23px;
+    }
+
+    .topSection .right p  {
+        font-size: 16px;
+    }
+
+    .topSection .right p span {
+        font-size: 13px;
+    }
+
+    .seeAll {
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 400px)
+{
+    .topSection .right p  {
+        font-size: 14px;
+    }
+
+    .topSection .right p span {
+        font-size: 11px;
+    }
+
+    .seeAll .arrow {
+        width: 22px;
+        height: 22px;
+    }
+
+    .seeAll .arrow svg {
+        width: 8px;
+        height: 8px;
+    }
+
+    .bottomSection :deep(.SeriesCard) , :deep(.seriesCardLoading) {
+        width: 260px;
+        flex: 0 0 auto;
+    }
+
+    :deep(.seriesCardLoading)  {
+        height: 135px;
+    }
+}
+
+@media(max-width: 350px)
+{
+    .topSection {
+        flex-wrap: wrap;
+    }
+
+    .seeAll {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
